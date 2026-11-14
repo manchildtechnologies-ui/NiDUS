@@ -99,6 +99,19 @@ The project owner reports that the loader and widgets run successfully on-consol
 
 **Firmware 13.60:** The project owner reports full on-console testing of NiDUS on PS5 firmware **13.60**, including the Widget Store, loader, and widgets. This is owner-verified testing, not a claim of compatibility with other firmware versions. Consult release-specific notes before installing.
 
+## 🔄 Refresh the Welcome Hub after changes
+
+**After installing or uninstalling a widget, refresh the Welcome Hub to see the change.** The Store may finish installing or removing a package before the Hub updates its visible tiles.
+
+Choose whichever method is easiest:
+
+1. **Use the built-in Refresh Hub button** in the NiDUS Widget Manager.
+2. **Open any full-screen app, then back out** to return to the Welcome Hub.
+3. **Reload the NiDUS ELF payload** to reload the Hub integration.
+
+> [!TIP]
+> If a newly installed widget is missing—or an uninstalled widget still appears—**refresh the Hub first** before troubleshooting the installation.
+
 ## Widget Store installation engine
 
 The NiDUS Widget Store uses a catalog-driven package format with widget identifiers, versions, declared files, screenshots, and icons. Its installer fetches declared files, stages them on the console, and asks the bridge to validate and commit the package. It supports **Install**, **Update**, and **Reinstall** actions with per-file progress.
@@ -115,7 +128,7 @@ The NiDUS Widget Store uses a catalog-driven package format with widget identifi
 
 **On-console verification:** A Blockris package was installed with its configuration, JavaScript, and PNG icon, and the resulting tile and glyph rendered. The installer guide documents the staged-file and commit checks.
 
-**After installation or update:** Open **Explore Hub** to make the new or changed widget visible. The store does **not** promise an automatic refresh; signing out and back in is another documented way to refresh the Hub runtime.
+**After installing, updating, or uninstalling:** Refresh the Hub using the Widget Manager's **Refresh Hub** button, by opening and exiting any full-screen app, or by reloading the NiDUS ELF payload. The Store does not automatically guarantee that the visible Hub tiles have refreshed.
 
 ### Catalogs and community repositories
 
