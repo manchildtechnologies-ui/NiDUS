@@ -129,7 +129,7 @@ For installation diagnostics, inspect `/data/wh-widgets/wh.log` (and `wh.log.1` 
 - **Verified test firmware: PS5 13.60** (project-owner tested on-console). Other firmware versions are not confirmed by this statement.
 - A PS5 with a compatible homebrew environment and a working method to load the supported bridge payload is required.
 - The Welcome Hub must already be active. If needed, see [WelcomeHubActivator](https://github.com/ghost1372/WelcomeHubActivator) by **[@ghost1372](https://github.com/ghost1372)**.
-- Follow instructions for the **specific build and firmware** you intend to use. No NiDUS-branded release assets are currently published in this repository.
+- Follow instructions for the **specific build and firmware** you intend to use. Check the repository's current releases and build instructions for supported installation files; do not assume an upstream bridge binary includes NiDUS-specific changes.
 - Avoid mixing experimental bridge builds or assuming upstream binaries include NiDUS-specific changes.
 
 ### Adding widgets
