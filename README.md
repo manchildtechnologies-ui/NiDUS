@@ -6,7 +6,9 @@
 
 ### Turn your PS5 Welcome Hub into something more.
 
-**Browse, install, update, and manage community widgets — right from your console.**
+**One ELF. A whole world of widgets.**
+
+Browse, install, update, and manage community widgets — right from your console. **The NiDUS ELF installs the Widget Store for you**, so there is no separate Store installation step.
 
 [![PS5](https://img.shields.io/badge/Platform-PlayStation%205-174B91?style=for-the-badge)](#before-installing)
 [![Tested on 13.60](https://img.shields.io/badge/Owner--tested-FW%2013.60-168E78?style=for-the-badge)](#testing-and-current-status)
@@ -23,7 +25,7 @@
 
 ## 🎮 Meet the NiDUS Widget Store
 
-**The Widget Store is the heart of NiDUS.** Discover games, news, weather, and utilities from a GitHub-powered catalog, inspect screenshots and package information, and install widgets directly on the PS5. NiDUS also provides the Welcome Hub loader, bridge, and SDK that make custom widgets possible.
+**The Widget Store is the heart of NiDUS — and it comes included with the NiDUS ELF.** Once the ELF is successfully loaded in a supported setup, the Store is installed and ready to use without separately downloading a Store widget package. Discover games, news, weather, and utilities from a GitHub-powered catalog, inspect screenshots and package information, and install widgets directly on the PS5. NiDUS also provides the Welcome Hub loader, bridge, and SDK that make custom widgets possible.
 
 <div align="center">
 
@@ -128,6 +130,7 @@ For installation diagnostics, inspect `/data/wh-widgets/wh.log` (and `wh.log.1` 
 
 - **Verified test firmware: PS5 13.60** (project-owner tested on-console). Other firmware versions are not confirmed by this statement.
 - A PS5 with a compatible homebrew environment and a working method to load the supported bridge payload is required.
+- **The NiDUS ELF includes the Widget Store.** You do not need to install the Store separately; after the ELF is successfully loaded, use the included Store to browse and install more widgets.
 - The Welcome Hub must already be active. If needed, see [WelcomeHubActivator](https://github.com/ghost1372/WelcomeHubActivator) by **[@ghost1372](https://github.com/ghost1372)**.
 - Follow instructions for the **specific build and firmware** you intend to use. Check the repository's current releases and build instructions for supported installation files; do not assume an upstream bridge binary includes NiDUS-specific changes.
 - Avoid mixing experimental bridge builds or assuming upstream binaries include NiDUS-specific changes.
