@@ -20,6 +20,10 @@ NiDUS is a community-developed extension of the [PS5 Welcome Hub Widgets](https:
 - **Community catalogs:** the store is designed for multiple repositories; configuration and supported release details will be documented once confirmed.
 - **See your widgets:** open Explore Hub after installation or update to load new or changed tiles.
 
+## Widget Manager
+
+The Store includes a dedicated **Widget Manager** screen for installed widgets. The on-console screenshots show an installed-widget count, a scrollable list of installed widgets with their identifiers, individual **Uninstall** actions, a **Refresh Hub** control, and a **Store** button to return to browsing. This makes removal and maintenance possible from the console interface without manually navigating the widget folders.
+
 ## Loader and platform features
 
 - Renders community widgets inside the Welcome Hub's native frame and header.
@@ -48,6 +52,8 @@ The project owner reports that the loader and widgets run successfully on-consol
 Compatibility varies by firmware and bridge build; consult release-specific notes before installing.
 
 ## Screenshots
+
+The existing screenshots below show the Welcome Hub integration. Additional on-console captures of the Store, Widget Manager, news widgets, games, and utilities have been supplied for the NiDUS showcase and will be added to the repository assets separately.
 
 ![Widget Store, Tetris and Calculator](img/20261113_110150_00429265.webp)
 
