@@ -59,7 +59,7 @@ The repository also contains the upstream **Hello Hub** and **Payload Monitor** 
 
 The project owner reports that the loader and widgets run successfully on-console. Package installation has been verified with PNG assets included, and screenshots are available in the GitHub widget catalog. The installer guide documents an end-to-end Blockris installation with validated configuration, JavaScript, and icon assets.
 
-Compatibility varies by firmware and bridge build; consult release-specific notes before installing.
+**Firmware 13.60:** The project owner reports full on-console testing of NiDUS on PS5 firmware **13.60**, including the Widget Store, loader, and widgets. This is owner-verified testing, not a claim of compatibility with other firmware versions. Consult release-specific notes before installing.
 
 ## Screenshots
 
@@ -95,6 +95,7 @@ For installation diagnostics, inspect `/data/wh-widgets/wh.log` (and `wh.log.1` 
 
 ## Before installing
 
+- **Verified test firmware: PS5 13.60** (project-owner tested on-console). Other firmware versions are not confirmed by this statement.
 - A PS5 with a compatible homebrew environment and a working method to load the supported bridge payload is required.
 - The Welcome Hub must already be active. If needed, see [WelcomeHubActivator](https://github.com/ghost1372/WelcomeHubActivator) by **[@ghost1372](https://github.com/ghost1372)**.
 - Follow instructions for the **specific build and firmware** you intend to use. No NiDUS-branded release assets are currently published in this repository.
