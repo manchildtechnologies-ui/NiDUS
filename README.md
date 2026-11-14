@@ -10,6 +10,8 @@ NiDUS is a community-developed extension of the [PS5 Welcome Hub Widgets](https:
 
 ## What is NiDUS?
 
+**[Browse the NiDUS Widget Catalog online](https://manchildtechnologies-ui.github.io/ps5-widget-store/)** · [Catalog source repository](https://github.com/manchildtechnologies-ui/ps5-widget-store)
+
 **The Widget Store is the heart of NiDUS.** It provides a console-first way to discover community widgets from a GitHub-hosted catalog, view their previews and screenshots, and install or update them with a controller. Behind the scenes, the custom Welcome Hub loader and native bridge make these widgets available alongside the PS5's existing Hub tiles. The repository also includes developer tools, sample widgets, and SDK documentation.
 
 ## Widget Store highlights
@@ -35,12 +37,20 @@ The Store includes a dedicated **Widget Manager** screen for installed widgets. 
 - Records detailed installation failures to support troubleshooting.
 - Backports the loader while reducing the bridge payload from **3.77 MB to approximately 557 KB** (project-owner reported figures; build-specific).
 
+## Online widget catalog
+
+The companion [GitHub Pages catalog](https://manchildtechnologies-ui.github.io/ps5-widget-store/) provides a browser-friendly preview of the widgets available through NiDUS. Its source lives in the separate [ps5-widget-store repository](https://github.com/manchildtechnologies-ui/ps5-widget-store), which hosts `catalog.json`, the widget package files, icons, and screenshots. Each widget also supports a direct detail-page link using `?widget=<catalog-id>`.
+
+The current catalog contains **12 entries**, including the Widget Store itself. The console Store reads catalog metadata and installs individual package files; it does not require ZIP archives. The catalog currently identifies the Store as version **1.0.5** and the catalog schema as version **1.1.4**.
+
+**Note:** The catalog website is for browsing and sharing widget information; actual console installation happens through the PS5 Widget Store tile and bridge.
+
 ## Widgets in the catalog
 
 | Category | Widgets |
 | --- | --- |
 | **Information & news** | Weather, PS5 News, Google News, TMZ |
-| **Utilities** | Calculator |
+| **Utilities** | Widget Store, Calculator |
 | **Games** | Blockris, Snake, Checkers, FLAP!, Memory Match, Mac-Pan |
 
 The repository also contains the upstream **Hello Hub** and **Payload Monitor** sample widgets.
