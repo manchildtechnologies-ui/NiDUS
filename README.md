@@ -1,6 +1,6 @@
 # NiDUS
 
-**A GitHub-powered Widget Store and custom loader that bring installable community widgets to PS5 Welcome Hub.**
+**A GitHub-powered Widget Store for the PS5 Welcome Hub — browse, install, update, and manage community widgets directly on your console.**
 
 NiDUS is a community-developed extension of the [PS5 Welcome Hub Widgets](https://github.com/geodox/ps5-wh-widgets) project by **[@geodox](https://github.com/geodox)**. It builds upon his original bridge, framework, and SDK, bringing additional widgets and compatibility work to the PS5 Welcome Hub.
 
@@ -10,9 +10,17 @@ NiDUS is a community-developed extension of the [PS5 Welcome Hub Widgets](https:
 
 ## What is NiDUS?
 
-NiDUS adds community-created React Native widgets alongside the PS5's native Welcome Hub widgets. The underlying framework injects a widget loader into the Hub, while a bridge exposes supported native-backed functionality. This repository includes the framework source, example widgets, development tools, and SDK documentation.
+**The Widget Store is the heart of NiDUS.** It provides a console-first way to discover community widgets from a GitHub-hosted catalog, view their previews and screenshots, and install or update them with a controller. Behind the scenes, the custom Welcome Hub loader and native bridge make these widgets available alongside the PS5's existing Hub tiles. The repository also includes developer tools, sample widgets, and SDK documentation.
 
-## Key features
+## Widget Store highlights
+
+- **Discover:** browse the GitHub-powered widget catalog with icons, package details, and screenshots.
+- **Install and update:** download complete widget packages, including binary assets, with per-file progress and reinstall support.
+- **Reliable installs:** validate packages, stage files, and atomically commit them with backup and restore protection.
+- **Community catalogs:** the store is designed for multiple repositories; configuration and supported release details will be documented once confirmed.
+- **See your widgets:** open Explore Hub after installation or update to load new or changed tiles.
+
+## Loader and platform features
 
 - Renders community widgets inside the Welcome Hub's native frame and header.
 - Passes widget configuration through `props.config` and per-widget settings through `props.settings`.
