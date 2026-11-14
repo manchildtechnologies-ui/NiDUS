@@ -1,6 +1,6 @@
 # NiDUS
 
-**Custom widgets for the PlayStation 5 Welcome Hub**
+**A GitHub-powered Widget Store and custom loader that bring installable community widgets to PS5 Welcome Hub.**
 
 NiDUS is a community-developed extension of the [PS5 Welcome Hub Widgets](https://github.com/geodox/ps5-wh-widgets) project by **[@geodox](https://github.com/geodox)**. It builds upon his original bridge, framework, and SDK, bringing additional widgets and compatibility work to the PS5 Welcome Hub.
 
@@ -12,18 +12,32 @@ NiDUS is a community-developed extension of the [PS5 Welcome Hub Widgets](https:
 
 NiDUS adds community-created React Native widgets alongside the PS5's native Welcome Hub widgets. The underlying framework injects a widget loader into the Hub, while a bridge exposes supported native-backed functionality. This repository includes the framework source, example widgets, development tools, and SDK documentation.
 
-The existing project documentation covers these additional widgets and features:
+## Key features
 
-| Widget | Description |
+- Renders community widgets inside the Welcome Hub's native frame and header.
+- Passes widget configuration through `props.config` and per-widget settings through `props.settings`.
+- Provides a native settings menu and persists widget settings in `.settings.json`.
+- Supports controller navigation, focusable buttons, and native Hub interaction.
+- Downloads widget package files individually, including PNG icons and other assets.
+- Displays package previews and screenshots in the Widget Store.
+- Records detailed installation failures to support troubleshooting.
+- Backports the loader while reducing the bridge payload from **3.77 MB to approximately 557 KB** (project-owner reported figures; build-specific).
+
+## Widgets in the catalog
+
+| Category | Widgets |
 | --- | --- |
-| **Widget Store** | Browse the community widget catalog |
-| **Weather** | Current conditions, a five-day forecast, and saved ZIP codes |
-| **Calculator** | A four-function calculator controlled with the D-pad |
-| **Tetris** | A falling-block puzzle game |
-| **Hello Hub** | Minimal SDK example with a live clock |
-| **Payload Monitor** | View running homebrew payloads with process and memory information |
+| **Information & news** | Weather, PS5 News, Google News, TMZ |
+| **Utilities** | Calculator |
+| **Games** | Blockris, Snake, Checkers, FLAP!, Memory Match, Mac-Pan |
 
-The README previously described bridge compatibility work, native Options-menu actions, and Weather ZIP management. Firmware and bridge-build compatibility must be checked per release; do not assume a feature is supported on every firmware.
+The repository also contains the upstream **Hello Hub** and **Payload Monitor** sample widgets.
+
+## Testing and current status
+
+The project owner reports that the loader and widgets run successfully on-console. Package installation has been verified with PNG assets included, and screenshots are available in the GitHub widget catalog. The installer guide documents an end-to-end Blockris installation with validated configuration, JavaScript, and icon assets.
+
+Compatibility varies by firmware and bridge build; consult release-specific notes before installing.
 
 ## Screenshots
 
