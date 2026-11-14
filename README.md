@@ -1,32 +1,78 @@
+<div align="center">
+
+![NiDUS — PS5 Welcome Hub Widget Store](img/nidus-readme-banner.svg)
+
 # NiDUS
 
-**A GitHub-powered Widget Store for the PS5 Welcome Hub — browse, install, update, and manage community widgets directly on your console.**
+### Turn your PS5 Welcome Hub into something more.
 
-NiDUS is a community-developed extension of the [PS5 Welcome Hub Widgets](https://github.com/geodox/ps5-wh-widgets) project by **[@geodox](https://github.com/geodox)**. It builds upon his original bridge, framework, and SDK, bringing additional widgets and compatibility work to the PS5 Welcome Hub.
+**Browse, install, update, and manage community widgets — right from your console.**
 
-![NiDUS widget showcase — PS5 Welcome Hub](img/welcomehub-showcase-20261113.jpg)
+[![PS5](https://img.shields.io/badge/Platform-PlayStation%205-174B91?style=for-the-badge)](#before-installing)
+[![Tested on 13.60](https://img.shields.io/badge/Owner--tested-FW%2013.60-168E78?style=for-the-badge)](#testing-and-current-status)
+[![12 widgets](https://img.shields.io/badge/Catalog-12%20widgets-2185C5?style=for-the-badge)](#explore-the-widgets)
+[![MIT License](https://img.shields.io/badge/License-MIT-556477?style=for-the-badge)](LICENSE)
 
-> **Built on geodox's work.** A special thank-you to [@geodox](https://github.com/geodox) for creating and sharing the [original PS5 Welcome Hub Widgets project](https://github.com/geodox/ps5-wh-widgets), and for being welcoming and helpful to fellow developers. His foundation made this possible. NiDUS is an independent community fork, not an official upstream release.
+**12 widgets available now · More being added regularly · Multiple catalog sources**
 
-## What is NiDUS?
+[**Explore the Widget Catalog**](https://manchildtechnologies-ui.github.io/ps5-widget-store/) · [**Package Repository**](https://github.com/manchildtechnologies-ui/ps5-widget-store) · [**Installation Prerequisites**](#before-installing) · [**Developer SDK**](docs/WIDGET_SDK.md)
 
-**[Browse the NiDUS Widget Catalog online](https://manchildtechnologies-ui.github.io/ps5-widget-store/)** · [Catalog source repository](https://github.com/manchildtechnologies-ui/ps5-widget-store)
+</div>
 
-**The Widget Store is the heart of NiDUS.** It provides a console-first way to discover community widgets from a GitHub-hosted catalog, view their previews and screenshots, and install or update them with a controller. Behind the scenes, the custom Welcome Hub loader and native bridge make these widgets available alongside the PS5's existing Hub tiles. The repository also includes developer tools, sample widgets, and SDK documentation.
+---
 
-## Widget Store highlights
+## 🎮 Meet the NiDUS Widget Store
 
-- **Discover:** browse the GitHub-powered widget catalog with icons, package details, and screenshots.
-- **Install and update:** download complete widget packages, including binary assets, with per-file progress and reinstall support.
-- **Reliable installs:** validate packages, stage files, and atomically commit them with backup and restore protection.
-- **Community catalogs:** the store is designed for multiple repositories; configuration and supported release details will be documented once confirmed.
-- **See your widgets:** open Explore Hub after installation or update to load new or changed tiles.
+**The Widget Store is the heart of NiDUS.** Discover games, news, weather, and utilities from a GitHub-powered catalog, inspect screenshots and package information, and install widgets directly on the PS5. NiDUS also provides the Welcome Hub loader, bridge, and SDK that make custom widgets possible.
 
-## Widget Manager
+<div align="center">
 
-The Store includes a dedicated **Widget Manager** screen for installed widgets. The on-console screenshots show an installed-widget count, a scrollable list of installed widgets with their identifiers, individual **Uninstall** actions, a **Refresh Hub** control, and a **Store** button to return to browsing. This makes removal and maintenance possible from the console interface without manually navigating the widget folders.
+![NiDUS widgets running in the PS5 Welcome Hub](img/20261113_110150_00429265.webp)
+*Actual on-console Welcome Hub capture*
 
-## Loader and platform features
+</div>
+
+| **Discover** | **Install** | **Manage** |
+| :--- | :--- | :--- |
+| Browse widget packages, details, screenshots and full-size previews. | Download individual files, including PNG assets, with progress and installed-state indicators. | Use the Widget Manager to review installed widgets, uninstall them, and refresh the Hub. |
+
+### 🎮 Designed for your PS5 controller
+
+| Control | Store action |
+| :---: | :--- |
+| **△ Triangle** | View widget information |
+| **R2** | Install the selected widget |
+| **L1 / R1** | Navigate catalog pages |
+| **L1** | Go back in supported views |
+
+The Store displays **four packages per page**, opens package pages in the PS5 browser, and lets you manage catalog sources through its settings.
+
+## 🧩 Explore the widgets
+
+**12 widgets in the catalog today, with more on the way.** The package catalog is maintained separately from this loader repository, so the library can keep growing without bundling every widget into the framework.
+
+| 🎮 Games | 📰 News & information | 🛠️ Utilities |
+| :--- | :--- | :--- |
+| **Blockris** — falling-block puzzle | **PS5 News** — headlines and releases | **Widget Store** — discover and install |
+| **Snake** — directional controls | **Google News** — headlines and browser links | **Calculator** — on-console calculations |
+| **Checkers** — play against the console | **TMZ** — photos and story browsing | |
+| **FLAP!** — bird-and-pipes arcade | **Weather** — ZIP codes and five-day forecast | |
+| **Memory Match** — card matching | | |
+| **Mac-Pan** — maze chase | | |
+
+**[Browse all packages and their screenshots →](https://manchildtechnologies-ui.github.io/ps5-widget-store/)**
+
+## 📸 On-console showcase
+
+<div align="center">
+<table><tr><td width="50%"><img src="img/20261113_110144_00592274.webp" alt="Weather and custom widgets in the Welcome Hub" width="100%"></td><td width="50%"><img src="img/20261113_110150_00429265.webp" alt="Widget Store and game tiles in the Welcome Hub" width="100%"></td></tr></table>
+</div>
+
+*More Store, Widget Manager, and individual-widget screenshots will be added as repository assets.*
+
+## 🚀 What powers NiDUS
+
+### Native Welcome Hub integration
 
 - Renders community widgets inside the Welcome Hub's native frame and header.
 - Passes widget configuration through `props.config` and per-widget settings through `props.settings`.
@@ -37,7 +83,7 @@ The Store includes a dedicated **Widget Manager** screen for installed widgets. 
 - Records detailed installation failures to support troubleshooting.
 - Backports the loader while reducing the bridge payload from **3.77 MB to approximately 557 KB** (project-owner reported figures; build-specific).
 
-## Online widget catalog
+## 🌐 The package catalog
 
 The companion [GitHub Pages catalog](https://manchildtechnologies-ui.github.io/ps5-widget-store/) provides a browser-friendly preview of the widgets available through NiDUS. Its source lives in the separate [ps5-widget-store repository](https://github.com/manchildtechnologies-ui/ps5-widget-store), which hosts `catalog.json`, the widget package files, icons, and screenshots. Each widget also supports a direct detail-page link using `?widget=<catalog-id>`.
 
@@ -45,29 +91,11 @@ The current catalog contains **12 entries**, including the Widget Store itself. 
 
 **Note:** The catalog website is for browsing and sharing widget information; actual console installation happens through the PS5 Widget Store tile and bridge.
 
-## Widgets in the catalog
-
-| Category | Widgets |
-| --- | --- |
-| **Information & news** | Weather, PS5 News, Google News, TMZ |
-| **Utilities** | Widget Store, Calculator |
-| **Games** | Blockris, Snake, Checkers, FLAP!, Memory Match, Mac-Pan |
-
-The repository also contains the upstream **Hello Hub** and **Payload Monitor** sample widgets.
-
 ## Testing and current status
 
 The project owner reports that the loader and widgets run successfully on-console. Package installation has been verified with PNG assets included, and screenshots are available in the GitHub widget catalog. The installer guide documents an end-to-end Blockris installation with validated configuration, JavaScript, and icon assets.
 
 **Firmware 13.60:** The project owner reports full on-console testing of NiDUS on PS5 firmware **13.60**, including the Widget Store, loader, and widgets. This is owner-verified testing, not a claim of compatibility with other firmware versions. Consult release-specific notes before installing.
-
-## Screenshots
-
-The existing screenshots below show the Welcome Hub integration. Additional on-console captures of the Store, Widget Manager, news widgets, games, and utilities have been supplied for the NiDUS showcase and will be added to the repository assets separately.
-
-![Widget Store, Tetris and Calculator](img/20261113_110150_00429265.webp)
-
-![Weather, Widget Store, Tetris and Calculator](img/20261113_110144_00592274.webp)
 
 ## Widget Store installation engine
 
@@ -89,11 +117,14 @@ The NiDUS Widget Store uses a catalog-driven package format with widget identifi
 
 ### Catalogs and community repositories
 
-The store uses a GitHub-hosted catalog, and NiDUS is being designed to accept **multiple widget repositories**. The precise multi-repository configuration and release status should be documented against the current store implementation before publishing setup steps.
+The store uses a GitHub-hosted catalog, and NiDUS supports configuring **multiple catalog sources** through the Widget Store settings. Use the current Store build's settings to add or manage repository sources.
 
 For installation diagnostics, inspect `/data/wh-widgets/wh.log` (and `wh.log.1` after a crash) and compare logged staged-byte counts with the package manifest.
 
 ## Before installing
+
+> [!IMPORTANT]
+> **Install and run [WelcomeHubActivator](https://github.com/ghost1372/WelcomeHubActivator) by [@ghost1372](https://github.com/ghost1372) first.** The PS5 Welcome Hub must be activated before NiDUS custom widgets can run.
 
 - **Verified test firmware: PS5 13.60** (project-owner tested on-console). Other firmware versions are not confirmed by this statement.
 - A PS5 with a compatible homebrew environment and a working method to load the supported bridge payload is required.
@@ -142,7 +173,7 @@ img/            Screenshots and documentation images
 repo.json       Existing payload catalog metadata (upstream)
 ```
 
-## Credits & origins
+## ❤️ Credits & origins
 
 - **[@geodox](https://github.com/geodox)** — Original [PS5 Welcome Hub Widgets](https://github.com/geodox/ps5-wh-widgets) project, bridge, SDK, and underlying framework. **NiDUS builds directly upon this work.** Thank you for sharing it and for your kindness to the community.
 - **[@ghost1372](https://github.com/ghost1372)** — [WelcomeHubActivator](https://github.com/ghost1372/WelcomeHubActivator), which enables the Welcome Hub where required.
