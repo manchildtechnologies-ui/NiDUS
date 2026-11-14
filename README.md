@@ -83,7 +83,6 @@ The Store displays **four packages per page**, opens package pages in the PS5 br
 - Downloads widget package files individually, including PNG icons and other assets.
 - Displays package previews and screenshots in the Widget Store.
 - Records detailed installation failures to support troubleshooting.
-- Backports the loader while reducing the bridge payload from **3.77 MB to approximately 557 KB** (project-owner reported figures; build-specific).
 
 ## 🌐 The package catalog
 
