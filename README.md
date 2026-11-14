@@ -31,6 +31,30 @@ The README previously described bridge compatibility work, native Options-menu a
 
 ![Weather, Widget Store, Tetris and Calculator](img/20261113_110144_00592274.webp)
 
+## Widget Store installation engine
+
+The NiDUS Widget Store uses a catalog-driven package format with widget identifiers, versions, declared files, screenshots, and icons. Its installer fetches declared files, stages them on the console, and asks the bridge to validate and commit the package. It supports **Install**, **Update**, and **Reinstall** actions with per-file progress.
+
+**Verified installation safeguards:**
+
+- Staged packages are checked for a matching `config.json` id and a non-empty `widget.js`.
+- Existing installations are backed up before the staged package is atomically moved into place; a failed commit restores the previous install.
+- A verified restore clears its temporary backup, avoiding stale-backup failures on subsequent attempts.
+- Unsafe filenames, symlinks, unexpected file types, and oversized packages are rejected. Current limits: **2 MiB per file, 16 files, and 8 MiB total**.
+- Install endpoints bind to **127.0.0.1** and enforce rate limits.
+- Binary assets (including PNG icons) are transferred using strict base64 decoding and atomic file writes.
+- Installation and rejection details are logged in `wh.log` for troubleshooting.
+
+**On-console verification:** A Blockris package was installed with its configuration, JavaScript, and PNG icon, and the resulting tile and glyph rendered. The installer guide documents the staged-file and commit checks.
+
+**After installation or update:** Open **Explore Hub** to make the new or changed widget visible. The store does **not** promise an automatic refresh; signing out and back in is another documented way to refresh the Hub runtime.
+
+### Catalogs and community repositories
+
+The store uses a GitHub-hosted catalog, and NiDUS is being designed to accept **multiple widget repositories**. The precise multi-repository configuration and release status should be documented against the current store implementation before publishing setup steps.
+
+For installation diagnostics, inspect `/data/wh-widgets/wh.log` (and `wh.log.1` after a crash) and compare logged staged-byte counts with the package manifest.
+
 ## Before installing
 
 - A PS5 with a compatible homebrew environment and a working method to load the supported bridge payload is required.
